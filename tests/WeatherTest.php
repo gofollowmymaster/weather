@@ -24,8 +24,8 @@ class WeatherTest extends TestCase
 {
     // 检查 $type 参数
     public function testGetWeatherWithInvalidType()
-    {$w = new Weather('mock-key');
-
+    {
+        $w = new Weather('mock-key');
         // 断言会抛出此异常类
         $this->expectException(InvalidArgumentException::class);
 
