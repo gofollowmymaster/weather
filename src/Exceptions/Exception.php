@@ -6,7 +6,7 @@
  * Time: 9:54
  */
 
-namespace Laraveler\Weather\Exceptions;
+namespace Gofollowmymaster\Weather\Exceptions;
 
 class Exception extends \Exception
 {

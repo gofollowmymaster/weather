@@ -6,7 +6,7 @@
  * Time: 9:56
  */
 
-namespace Laraveler\Weather\Exceptions;
+namespace Gofollowmymaster\Weather\Exceptions;
 
 class HttpException extends Exception
 {

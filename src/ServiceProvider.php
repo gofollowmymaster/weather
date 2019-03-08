@@ -6,7 +6,7 @@
  * Time: 11:21
  */
 
-namespace Laraveler\Weather;
+namespace Gofollowmymaster\Weather;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

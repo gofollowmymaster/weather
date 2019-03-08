@@ -6,15 +6,15 @@
  * Time: 10:01
  */
 
-namespace Laraveler\Weather\Tests;
+namespace Gofollowmymaster\Weather\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
 use Mockery\Matcher\AnyArgs;
-use Laraveler\Weather\Exceptions\HttpException;
-use Laraveler\Weather\Exceptions\InvalidArgumentException;
-use Laraveler\Weather\Weather;
+use Gofollowmymaster\Weather\Exceptions\HttpException;
+use Gofollowmymaster\Weather\Exceptions\InvalidArgumentException;
+use Gofollowmymaster\Weather\Weather;
 use PHPUnit\Framework\TestCase;
 
 class WeatherTest extends TestCase

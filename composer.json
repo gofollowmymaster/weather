@@ -1,5 +1,5 @@
 {
-    "name": "laraveler\/weather-zh",
+    "name": "gofollowmymaster\/weather-zh",
     "description": "a  weather  sdk",
     "license": "MIT",
     "authors": [
@@ -15,14 +15,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Laraveler\\Weather\\": "src"
+            "Gofollowmymaster\\Weather\\": "src"
         }
     },
 
     "extra": {
         "laravel": {
             "providers": [
-                "Overtrue\\Weather\\ServiceProvider"
+                "Gofollowmymaster\\Weather\\ServiceProvider"
             ]
         }
     }

@@ -5,12 +5,12 @@
  * Date: 2019/3/8
  * Time: 9:42
  */
-namespace Laraveler\Weather;
+namespace Gofollowmymaster\Weather;
 
 use GuzzleHttp\Client;
 
-use Laraveler\Weather\Exceptions\HttpException;
-use Laraveler\Weather\Exceptions\InvalidArgumentException;
+use Gofollowmymaster\Weather\Exceptions\HttpException;
+use Gofollowmymaster\Weather\Exceptions\InvalidArgumentException;
 
 class Weather
 {
