@@ -1,24 +1,29 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zh
- * Date: 2019/3/8
- * Time: 9:42
+
+/*
+ * This file is part of the gofollowmymaster/weather.
+ *
+ * (c) gofollowmymaster<i@gofollowmymaster.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
+
 namespace Gofollowmymaster\Weather;
 
 use GuzzleHttp\Client;
-
 use Gofollowmymaster\Weather\Exceptions\HttpException;
 use Gofollowmymaster\Weather\Exceptions\InvalidArgumentException;
 
 class Weather
 {
     private $key;
+
     protected $guzzleOptions = [];
 
-    public function  __construct($key){
-        $this->key=$key;
+    public function __construct($key)
+    {
+        $this->key = $key;
     }
 
     public function getHttpClient()
@@ -30,7 +35,6 @@ class Weather
     {
         $this->guzzleOptions = $options;
     }
-
 
     public function getWeather($city, string $type = 'base', string $format = 'json')
     {
@@ -48,7 +52,7 @@ class Weather
             'key' => $this->key,
             'city' => $city,
             'output' => \strtolower($format),
-            'extensions' =>  \strtolower($type),
+            'extensions' => \strtolower($type),
         ]);
 
         try {
@@ -61,6 +65,4 @@ class Weather
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
         }
     }
-
-
 }
