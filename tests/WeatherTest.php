@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zh
- * Date: 2019/3/8
- * Time: 10:01
+
+/*
+ * This file is part of the gofollowmymaster/weather.
+ *
+ * (c) gofollowmymaster<i@gofollowmymaster.me>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Gofollowmymaster\Weather\Tests;
@@ -19,7 +22,6 @@ use PHPUnit\Framework\TestCase;
 
 class WeatherTest extends TestCase
 {
-
     // 检查 $type 参数
     public function testGetWeatherWithInvalidType()
     {
@@ -53,6 +55,7 @@ class WeatherTest extends TestCase
         // 如果没有抛出异常，就会运行到这行，标记当前测试没成功
         $this->fail('Failed to assert getWeather throw exception with invalid argument.');
     }
+
     public function testGetWeather()
     {
         // 创建模拟接口响应值。
@@ -68,7 +71,7 @@ class WeatherTest extends TestCase
                 'city' => '深圳',
                 'output' => 'json',
                 'extensions' => 'base',
-            ]
+            ],
         ])->andReturn($response);
 
         // 将 `getHttpClient` 方法替换为上面创建的 http client 为返回值的模拟方法。
@@ -78,7 +81,6 @@ class WeatherTest extends TestCase
         // 然后调用 `getWeather` 方法，并断言返回值为模拟的返回值。
         $this->assertSame(['success' => true], $w->getWeather('深圳'));
     }
-
 
     public function testGetWeatherWithGuzzleRuntimeException()
     {
@@ -96,7 +98,6 @@ class WeatherTest extends TestCase
 
         $w->getWeather('深圳');
     }
-
 
     public function testGetHttpClient()
     {
@@ -119,5 +120,4 @@ class WeatherTest extends TestCase
         // 设置参数后，timeout 为 5000
         $this->assertSame(5000, $w->getHttpClient()->getConfig('timeout'));
     }
-
 }
