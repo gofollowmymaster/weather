@@ -1,0 +1,30 @@
+{
+    "name": "laraveler\/weather",
+    "description": "a  weather  sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zh",
+            "email": "1950796924@qq.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3",
+        "phpunit/phpunit": "^7.5",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laraveler\\Weather\\": "src"
+        }
+    }
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Overtrue\\Weather\\ServiceProvider"
+            ]
+        }
+    }
+
+}
